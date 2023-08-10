@@ -28,7 +28,6 @@ function startGame() {
     for (let r = 0; r < rows; r++) {
         let row = [];
         for (let c = 0; c < columns; c++) {
-            // <img id="0-0" src="./images/Red.png">
             let tile = document.createElement("img");
             tile.id = r.toString() + "-" + c.toString();
             tile.src = "./images/" + GenrateRandomCandy() + ".png";
@@ -114,8 +113,6 @@ function dragEnd() {
 }
 
 function crushCandy() {
-    //crushFive();
-    //crushFour();
     crushThree();
     document.getElementById("score").innerText = score;
 
@@ -155,7 +152,6 @@ function crushThree() {
 }
 
 function checkValid() {
-    //check rows
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns-2; c++) {
             let candy1 = board[r][c];
@@ -167,7 +163,6 @@ function checkValid() {
         }
     }
 
-    //check columns
     for (let c = 0; c < columns; c++) {
         for (let r = 0; r < rows-2; r++) {
             let candy1 = board[r][c];
